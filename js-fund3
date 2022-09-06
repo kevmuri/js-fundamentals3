@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Fundamentals 3</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="var1" name="var1"><br>
+        <input type="text" id="var2" name="var2"><br> 
+        <input type="submit" value="add7" onclick="add7()">
+        <input type="submit" value="multiply" onclick="multiply()">
+        <input type="submit" value="capitalize" onclick="capitalize()">
+        <input type="submit" value="lastLetter" onclick="lastLetter()">
+    </form>
+
+    <script>
+
+        function add7() {
+            let var1 = document.getElementById("var1").value;
+            let result = parseInt(var1) + 7;
+            alert("add7 result: " + result);
+        }
+
+        function multiply() {
+            let var1 = document.getElementById("var1").value;
+            let var2 = document.getElementById("var2").value;
+            let result = parseInt(var1) * parseInt(var2);
+            alert("multiply result: " + result);
+        }
+
+        function capitalize() {
+            let var1 = document.getElementById("var1").value;
+            let result = var1.toLowerCase();
+            result = result.charAt(0).toUpperCase() + result.slice(1);
+            alert("capitalize result: " + result);
+        }
+
+        function lastLetter() {
+            let var1 = document.getElementById("var1").value;
+            let result = var1.slice(-1);
+            alert("lastLetter result: " + result);
+        }
+
+    </script>
+
+</body>
+</html>
